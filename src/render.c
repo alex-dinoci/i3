@@ -463,8 +463,6 @@ static void render_con_tabbed(Con *con, Con *child, render_params *p, int i) {
     }
 
     if (p->children > 1 || (child->border_style != BS_PIXEL && child->border_style != BS_NONE)) {
-        child->rect.y += p->deco_height;
-        child->rect.height -= p->deco_height;
         child->deco_rect.height = p->deco_height;
     } else {
         child->deco_rect.height = (child->border_style == BS_PIXEL ? 1 : 0);
